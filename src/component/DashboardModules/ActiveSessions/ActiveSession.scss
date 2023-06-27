@@ -1,0 +1,321 @@
+.Active {
+  display: grid;
+  grid-template-columns: 1fr minmax(250px, 35%);
+  margin-top: 20px;
+  margin-left: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .Active-left {
+    padding: 10px 20px;
+    .active-left-top {
+      .Sessions-head {
+        font-size: 35px;
+        margin-top: 20px;
+      }
+      .active-left-top-wrapper {
+        margin-top: 20px;
+        @include grit(center, start);
+        flex-wrap: wrap;
+        gap: 50px;
+        .bar {
+          .top-text {
+            @include grit(start, start);
+            gap: 30px;
+            .top-Product {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              gap: 4px;
+              .Product {
+                font-size: 20px;
+                font-weight: 400;
+              }
+              .Middle {
+                color: #979ca5;
+                font-size: 14px;
+              }
+              .line {
+                ul {
+                  list-style-type: none;
+                  margin-left: -30px;
+                  li::before {
+                    content: "\2022";
+                    color: $primary-color;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: -1em;
+                  }
+                }
+              }
+            }
+            .top-btns {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              gap: 5px;
+              .Live {
+                background-color: $orange-color;
+                color: $white-color;
+                border-radius: 50px;
+                padding: 6px 25px;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+              }
+              .Feedback {
+                background-color: $feedback-button;
+                color: $white-color;
+                border-radius: 50px;
+                padding: 6px 25px;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+              }
+              .perc {
+                background-color: $body-color;
+                border: none;
+                margin-top: 30px;
+              }
+            }
+          }
+          .proses {
+            width: 266px;
+            height: 13px;
+            color: $primary-color;
+            // background-color: $primary-color;
+            .proses::-moz-progress-bar {
+              background: $primary-color;
+            }
+
+            .proses::-webkit-progress-value {
+              background: $primary-color;
+            }
+
+            .proses::-webkit-progress-bar {
+              background: $primary-color;
+            }
+          }
+          .HomeWork {
+            background-color: $feedback-button;
+            border-radius: 50px;
+            color: $white-color;
+            font-size: 14px;
+            margin-top: 20px;
+            .Upload {
+              position: relative;
+              background-color: $primary-color;
+              border: none;
+              padding: 10px 10px;
+              width: 150px;
+              border-radius: 50px;
+              color: $white-color;
+              font-size: 14px;
+              font-weight: bold;
+              overflow: hidden;
+              input[type="file"] {
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: scale(3);
+                opacity: 0;
+              }
+            }
+            .Download {
+              border: none;
+              background-color: $feedback-button;
+              color: $white-color;
+              width: 150px;
+              border-radius: 50px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .active-left-bottom {
+      margin-top: 30px;
+      .bottom-active {
+        @include grit(start, space-between);
+        .Completed {
+          font-size: 35px;
+        }
+        .view {
+          font-size: 20px;
+          color: $primary-color;
+          @include grit(center, center);
+          gap: 10px;
+        }
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        .Course {
+          color: $grey;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .Basics {
+          font-size: 18px;
+          font-weight: 500;
+          .Bruno {
+            font-size: 14px;
+            font-weight: 500;
+            color: $grey;
+          }
+        }
+        .star {
+          color: $rate-color;
+          //   text-align: center;
+          // @include grit(center, start);
+          // gap: 5px;
+        }
+        .DESIGN {
+          // color: $white-color;
+          font-weight: 500;
+          font-size: 12px;
+          background-color: $ui-design;
+          border: none;
+          border-radius: 10px;
+          padding: 7px 15px;
+        }
+        .download {
+          // text-align: center;
+          .TfiDownload {
+            border: 1px solid $light-grey;
+            padding: 10px;
+          }
+        }
+        td,
+        th {
+          text-align: left;
+          font-size: 18px;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: $body-color;
+        }
+      }
+    }
+  }
+  .Active-right {
+    background-color: $side-bar-color;
+    .active-right-one {
+      .one-img {
+        @include grit(center, center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        border-bottom: 2px solid $light-grey;
+
+        .Contact {
+          margin-bottom: 10px;
+          color: $grey;
+          .email {
+            margin-left: 20px;
+          }
+        }
+        .Profile {
+          // margin-top: 10px;
+          margin-left: 130px;
+          border: none;
+          background-color: $primary-color;
+          color: $white-color;
+          font-weight: 500;
+          padding: 7px 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+        }
+      }
+      .right-two {
+        padding: 10px 40px;
+        .right-two-top {
+          @include grit(center, space-between);
+          .Reminders {
+            font-size: 25px;
+          }
+          .IoMdNotificationsOff {
+            background-color: $white-color;
+            font-size: 24px;
+            padding: 8px 10px;
+            border-radius: 50px;
+          }
+        }
+        .right_two_middle {
+          background-color: $white-color;
+          margin-top: 10px;
+          @include grit(center, space-evenly);
+          padding: 10px 10px;
+          border-radius: 10px;
+          .RxSpeakerLoud {
+            background-color: $ui-design;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+            color: #ffd143;
+          }
+          .FiMoreVertical {
+            color: $grey;
+            font-size: 24px;
+          }
+          .worktime {
+            font-size: 20px;
+            .time {
+              color: $light-grey;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .right-three {
+        padding: 10px 40px;
+        margin-top: 20px;
+        .right-upcoming {
+          margin-bottom: 20px;
+          .UpComing {
+            font-size: 25px;
+          }
+        }
+        .right-three-one {
+          @include grit(center, space-between);
+          margin-top: 10px;
+          .htmlBasics {
+            font-size: 20px;
+            .Brunoscott {
+              color: $light-grey;
+              font-size: 14px;
+            }
+          }
+          .right-flot {
+            display: flex;
+            gap: 10px;
+            .BiCalendar {
+              font-size: 15px;
+
+              .BiCalendarDate {
+                background-color: $side-bar-color;
+                border: none;
+                width: 21px;
+              }
+            }
+            .AiOutlineBell {
+              font-size: 24px;
+              color: $grey;
+              .apr {
+                color: $primary-color;
+                font-size: 14px;
+                margin-top: 30px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

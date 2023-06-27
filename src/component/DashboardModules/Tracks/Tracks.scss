@@ -1,0 +1,74 @@
+.track{
+.track-top{
+  text-align: center;
+  margin-top: 50px;
+  .OurTracks{
+    font-size: 35px;
+  }
+  .Instructors{
+    font-size: 24px;
+  }
+}
+
+.Swiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: $white-color;
+    padding: 10px 10px;
+    .text {
+      padding: 10px;
+      position: relative;
+      .rating {
+        @include grit(start, space-between);
+        border-bottom: 1px dashed $grey;
+        .uidesign {
+          margin-bottom: 20px;
+          .ux {
+            color: $grey;
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+        .AiTwotoneStar {
+          font-size: 20px;
+          color: #ffa135;
+        }
+      }
+      .videohours {
+        @include grit(center, start);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+        .BsCameraVideo {
+          @include grit(center, center);
+          gap: 5px;
+          font-size: 18px;
+          .hrs {
+            font-size: 13px;
+            color: $grey;
+          }
+        }
+      }
+      .JoinLive {
+        position: absolute;
+        left: 35%;
+        background-color: $orange-color;
+        border: none;
+        color: $white-color;
+        padding: 10px 25px;
+        @include grit(center, center);
+        border-radius: 50px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+}

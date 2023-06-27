@@ -1,0 +1,28 @@
+$primary-color: #309700;
+$white-color: #fff;
+$body-color: #f5fff1;
+$side-bar-color: #e3ffd7;
+$yellow-color: #d9b10f;
+$studies-color: #07b8df;
+$orange-color: #ff7426;
+$feedback-button: #8ed76b;
+$type-color: #f6efd8;
+$rate-color: #ffc000;
+$grey: #94918a;
+$light-grey: #bdbdbd;
+$dark-green: #d4ffc0;
+$black-color: #000;
+$ui-design:#F6EFD8;
+$cone-color:#324705;
+$pencil:
+#f4b77e;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+@mixin grit($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}

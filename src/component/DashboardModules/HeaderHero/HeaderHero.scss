@@ -1,0 +1,30 @@
+.hero {
+  background-color: $primary-color;
+  height: 267px;
+  width: 100%;
+  position: relative;
+ 
+  .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    margin: auto;
+    text-align: center;
+    color: $white-color;
+
+    .hero-learner {
+      font-size: 35px;
+    }
+    .hero-para {
+      font-size: 22px;
+      width: 520px;
+    }
+  }
+  .home{
+    position: absolute;
+    top:90%;
+    left:1%;
+    font-size: 20px;
+    color:$white-color;
+  }
+}
