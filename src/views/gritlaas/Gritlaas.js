@@ -40,8 +40,8 @@ function Gritlaas() {
           </a>
           <nav id="navbar" class="navbar">
             <ul>
-                <li><a onClick={() => Navigate("/gritlasshome")}>B2B</a></li> 
-               {/* <li><a onClick={() => Navigate("/studentlogin")}>Learner</a></li>
+              {/*<li><a onClick={() => Navigate("/gritlasshome")}>B2B</a></li> 
+                <li><a onClick={() => Navigate("/studentlogin")}>Learner</a></li>
                <li><a onClick={() => Navigate("/educatorlogin")}>Educator</a></li> */}
                <li><a href="https://www.gritdigitech.com/market.html">Buy Courses</a></li>
                <li><a href="https://www.gritdigitech.com/adminlogin.html">Admin</a></li> 
@@ -60,7 +60,7 @@ function Gritlaas() {
           <div class="container position-relative">
             <div class="row d-flex justify-content-center">
               <div class="col-lg-6 text-center">
-                <h2 class="fs-1" style={styleObj} >Learning Platform for B2C </h2>
+                <h2 class="fs-1" style={styleObj} >Learning Platform for B2B </h2>
                 <p class="lead" style={styleObj2}>Passionate In Connecting Underserved Market To Succeed By Providing Equal Opportunity To WIN Life.</p>
               </div>
             </div>
