@@ -1,37 +1,50 @@
-import { useRef, useState } from "react";
+import React from "react";
 import little from "../../../assets/img/little.png";
-// import one from "../../Assets/Group 335.png";
-// import two from "../../Assets/Group 336.png";
-import { AiTwotoneStar, AiOutlineClockCircle } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { AiTwotoneStar, AiOutlineClockCircle,AiOutlineArrowRight, AiOutlineArrowLeft} from "react-icons/ai";
+
 import { BiSolidStarHalf } from "react-icons/bi";
 import { FiVideo } from "react-icons/fi";
 import { TbDownload } from "react-icons/tb";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"; // Import left and right arrow icons
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation"; // Import Swiper navigation styles
+import SwiperCore, { Navigation ,Pagination } from "swiper";
 
-import {} from "swiper";
+SwiperCore.use([Navigation, Pagination]);
+
 const Tracks = () => {
   return (
     <div className="track">
       <div className="track-top">
         <h2 className="OurTracks">Our Tracks</h2>
         <p className="Instructors">
-          Best Instructors Cost Friendly Class To Make Sucessor
+          Best Instructors Cost Friendly Class To Make Successor
         </p>
       </div>
       <Swiper
-        slidesPerView={"3"}
+        slidesPerView={"auto"}
         spaceBetween={20}
         pagination={{
           clickable: false,
         }}
         modules={[]}
         className="Swiper"
+        navigation={{
+          prevEl: ".AiOutlineArrowLeft",
+          nextEl: ".AiOutlineArrowRight",
+        }} // Pass the prevEl and nextEl class names to Swiper navigation prop
       >
+        {/* Left and Right arrow buttons */}
+      <button className="AiOutlineArrowLeft">
+        <AiOutlineArrowLeft />
+      </button>
+      <button className="AiOutlineArrowRight">
+        <AiOutlineArrowRight />
+      </button>
         <SwiperSlide className="SwiperSlide">
-          <div className="">
-            <img
+           <div className="">
+             <img
               src="https://media.istockphoto.com/id/613241758/photo/young-woman-working-on-a-laptop.jpg?s=612x612&w=0&k=20&c=B3WbJ7VFEr77G0T698I0WMkM5LOV-pMrLCljEEJGh-o="
               alt=""
               width="464"
@@ -109,6 +122,7 @@ const Tracks = () => {
             <button className="JoinLive">Join Live</button>
           </div>
         </SwiperSlide>
+        
         <SwiperSlide className="SwiperSlide">
           <div className="">
             <img
@@ -267,6 +281,8 @@ const Tracks = () => {
             <button className="JoinLive">Join Live</button>
           </div>
         </SwiperSlide>
+
+        {/* ... (more SwiperSlides) */}
       </Swiper>
     </div>
   );

@@ -1,26 +1,50 @@
 .Active {
-  display: grid;
-  grid-template-columns: 1fr minmax(250px, 35%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+  // grid-template-columns: 1fr minmax( 70%, 1fr);
   margin-top: 20px;
   margin-left: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  justify-content: center;
+
   .Active-left {
-    padding: 10px 20px;
+    // padding: 10px 50px;
+    flex: 1;
+    padding: 2%;
+    flex-basis: 70%;
+    background-color: #ffffff;
     .active-left-top {
+      
       .Sessions-head {
         font-size: 35px;
         margin-top: 20px;
+        
       }
       .active-left-top-wrapper {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
-        @include grit(center, start);
+        margin-left: 0;
+        // @include grit(center, start);
         flex-wrap: wrap;
-        gap: 50px;
+        // gap: 15%;
+        .top-img{
+          margin-right: auto;
+          padding-left: 5%;
+        }
         .bar {
+          width: 50%;
+          padding-right: 3%;
+          margin-top: 10px;
+          justify-content: center;
           .top-text {
-            @include grit(start, start);
+            display: flex;
+            
+            // @include grit(start, start);
+            justify-content: center;
             gap: 30px;
             .top-Product {
               display: flex;
@@ -28,7 +52,8 @@
               flex-wrap: wrap;
               gap: 4px;
               .Product {
-                font-size: 20px;
+                
+                font-size: 22px;
                 font-weight: 400;
               }
               .Middle {
@@ -46,7 +71,8 @@
                     display: inline-block;
                     width: 10px;
                     height: 10px;
-                    margin-left: -1em;
+                    margin-left: -10px;
+                    margin-top: 10px;
                   }
                 }
               }
@@ -75,15 +101,17 @@
                 font-weight: 500;
               }
               .perc {
-                background-color: $body-color;
+                background-color: #ffffff;
                 border: none;
+                width: 80%;
                 margin-top: 30px;
               }
             }
           }
           .proses {
-            width: 266px;
-            height: 13px;
+            margin-left: 14%;
+            width: 70%;
+            height: 21px;
             color: $primary-color;
             // background-color: $primary-color;
             .proses::-moz-progress-bar {
@@ -98,41 +126,58 @@
               background: $primary-color;
             }
           }
-          .HomeWork {
-            background-color: $feedback-button;
-            border-radius: 50px;
-            color: $white-color;
+
+
+// .UploadDownload Start
+
+          .radio-inputs {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 2rem;
+            background-color: #9ae776;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 13px 2px rgba(46, 32, 32, 0.226);
+            // padding: 0.25rem;
+            width:40%;
             font-size: 14px;
-            margin-top: 20px;
-            .Upload {
-              position: relative;
-              background-color: $primary-color;
-              border: none;
-              padding: 10px 10px;
-              width: 150px;
-              border-radius: 50px;
-              color: $white-color;
-              font-size: 14px;
-              font-weight: bold;
-              overflow: hidden;
-              input[type="file"] {
-                cursor: pointer;
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: scale(3);
-                opacity: 0;
-              }
-            }
-            .Download {
-              border: none;
-              background-color: $feedback-button;
-              color: $white-color;
-              width: 150px;
-              border-radius: 50px;
-              font-weight: bold;
-            }
           }
+          .radio{
+            // margin: 5px;
+            margin: 0px;
+
+          }
+          
+          .radio-inputs .radio {
+            flex: 1 1 auto;
+            text-align: center;
+          }
+          
+          .radio-inputs .radio input {
+            display: none;
+          }
+          
+          .radio-inputs .radio .name {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            border: none;
+            padding: .5rem 0;
+            color: rgba(51, 65, 85, 1);
+            transition: all .15s ease-in-out;
+          }
+          
+          .radio-inputs .radio input:checked + .name {
+            background-color: #fff;
+            font-weight: 600;
+          }   
+// .UploadDownload end          
+
+          
         }
       }
     }
@@ -144,6 +189,9 @@
           font-size: 35px;
         }
         .view {
+          width: 150px;
+          margin-top: 1%;
+          margin-right:4% ;
           font-size: 20px;
           color: $primary-color;
           @include grit(center, center);
@@ -155,21 +203,27 @@
         border-collapse: collapse;
         width: 100%;
         margin-top: 20px;
+        
         .Course {
           color: $grey;
           font-size: 18px;
           font-weight: 500;
+          text-align: center;
         }
         .Basics {
           font-size: 18px;
           font-weight: 500;
+          text-align: center;
+          width: 40%;
           .Bruno {
             font-size: 14px;
             font-weight: 500;
             color: $grey;
+            text-align: center;
           }
         }
         .star {
+          text-align: center;
           color: $rate-color;
           //   text-align: center;
           // @include grit(center, start);
@@ -177,23 +231,29 @@
         }
         .DESIGN {
           // color: $white-color;
+          text-align: center;
           font-weight: 500;
           font-size: 12px;
           background-color: $ui-design;
           border: none;
           border-radius: 10px;
-          padding: 7px 15px;
+          // padding: 7px 15px;
         }
         .download {
+          padding: 0;
+          text-align: center;
           // text-align: center;
-          .TfiDownload {
-            border: 1px solid $light-grey;
-            padding: 10px;
+          .BsFillCloudDownloadFill {
+            // border: 1px solid $light-grey;
+            padding: 0px;
+            color: #5fa55f;
+            font-size: 150%;
           }
         }
         td,
         th {
-          text-align: left;
+
+          text-align: center;
           font-size: 18px;
           padding: 8px;
         }
@@ -205,6 +265,8 @@
   }
   .Active-right {
     background-color: $side-bar-color;
+    flex: 1;
+    flex-basis: 30%;
     .active-right-one {
       .one-img {
         @include grit(center, center);
@@ -217,12 +279,11 @@
           margin-bottom: 10px;
           color: $grey;
           .email {
-            margin-left: 20px;
+            margin-left: 5px;
           }
         }
         .Profile {
-          // margin-top: 10px;
-          margin-left: 130px;
+          margin: 0 auto;
           border: none;
           background-color: $primary-color;
           color: $white-color;
@@ -250,13 +311,13 @@
           background-color: $white-color;
           margin-top: 10px;
           @include grit(center, space-evenly);
-          padding: 10px 10px;
+          padding: 5px 5px;
           border-radius: 10px;
           .RxSpeakerLoud {
             background-color: $ui-design;
-            padding: 10px 15px;
+            padding: 6px 15px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 30px;
             border-radius: 10px;
             color: #ffd143;
           }
@@ -300,7 +361,9 @@
 
               .BiCalendarDate {
                 background-color: $side-bar-color;
+                align-self: center;
                 border: none;
+                margin-top: 8px;
                 width: 21px;
               }
             }
@@ -317,5 +380,33 @@
         }
       }
     }
+  }
+  @media (max-width: 768px) {
+    .Active-left {
+      order: 1;
+      padding: 0.8%;
+      .Sessions-head{
+        text-align: center;
+      }
+      .active-left-top-wrapper {
+        padding-right:1%;
+        .top-img{
+          padding-right:4%;
+        }
+        
+        }
+    
+    }
+    .radio-inputs{
+      width: 100% !important;
+    }
+  }
+  
+  /* Style for Active-right in mobile view */
+  @media (max-width: 768px) {
+    .Active-right {
+      order: 2;
+    }
+
   }
 }

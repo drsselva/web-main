@@ -1,74 +1,142 @@
-.track{
-.track-top{
-  text-align: center;
-  margin-top: 50px;
-  .OurTracks{
-    font-size: 35px;
-  }
-  .Instructors{
-    font-size: 24px;
-  }
-}
+.track {
+  .track-top {
+    text-align: center;
+    margin-top: 50px;
 
-.Swiper {
-  width: 100%;
-  height: 100%;
+    .OurTracks {
+      font-size: 35px;
+    }
 
-  .swiper-slide {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    z-index: -1;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: $white-color;
-    padding: 10px 10px;
-    .text {
-      padding: 10px;
-      position: relative;
-      .rating {
-        @include grit(start, space-between);
-        border-bottom: 1px dashed $grey;
-        .uidesign {
-          margin-bottom: 20px;
-          .ux {
-            color: $grey;
-            font-size: 14px;
-            margin-bottom: 10px;
-          }
-        }
-        .AiTwotoneStar {
-          font-size: 20px;
-          color: #ffa135;
-        }
-      }
-      .videohours {
-        @include grit(center, start);
-        margin-top: 10px;
-        margin-bottom: 10px;
-        gap: 10px;
-        .BsCameraVideo {
-          @include grit(center, center);
-          gap: 5px;
-          font-size: 18px;
-          .hrs {
-            font-size: 13px;
-            color: $grey;
-          }
-        }
-      }
-      .JoinLive {
-        position: absolute;
-        left: 35%;
-        background-color: $orange-color;
-        border: none;
-        color: $white-color;
-        padding: 10px 25px;
-        @include grit(center, center);
-        border-radius: 50px;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
+    .Instructors {
+      font-size: 24px;
     }
   }
-}
+  
+
+  .Swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      width: 428px;
+      margin-left: 1vh;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      z-index: -1;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background-color: #ffffff;
+      padding: 10px 10px; 
+    
+      .text {
+        padding: 10px;
+        position: relative;
+    
+        .rating {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px dashed #ccc;
+    
+          .uidesign {
+            margin-bottom: 20px;
+            .ux {
+              color: #ccc;
+              font-size: 14px; 
+              margin-bottom: 10px;
+            }
+          }
+    
+          .AiTwotoneStar {
+            font-size: 20px; 
+            color: #ffa135;
+          }
+        }
+    
+        .videohours {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+          margin-bottom: 10px;
+    
+          .BsCameraVideo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 18px;
+    
+            .hrs {
+              font-size: 13px; 
+              color: #ccc;
+            }
+          }
+        
+    }
+    
+
+
+
+        .JoinLive {
+          position: absolute;
+          left: 35%;
+          background-color: #ff5f00;
+          border: none;
+          color: #ffffff;
+          padding: 10px 25px;
+          border-radius: 50px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+  
+    .AiOutlineArrowLeft,
+    .AiOutlineArrowRight {
+      font-size: 0px;
+      width: 40px;
+      height: 40px;
+      background-color: #fff; 
+      border-radius: 50%;
+      color: #000; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none; 
+      outline: none; 
+
+      &:hover {
+        background-color: #f0f0f0; 
+      }
+
+      svg {
+        width: 24px; 
+        height: 24px;
+        fill: #000; 
+      }
+    }
+
+    .AiOutlineArrowLeft {
+      left: 0%;
+    }
+
+    .AiOutlineArrowRight {
+      right: 0%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .Swiper {
+      width: 102.8%;
+      .swiper-slide{
+        width: 96%;
+      }
+    }
+    
+  }
 }
