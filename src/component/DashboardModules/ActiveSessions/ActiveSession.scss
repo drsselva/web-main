@@ -83,7 +83,7 @@
               flex-wrap: wrap;
               gap: 5px;
               .Live {
-                background-color: $orange-color;
+                background-color: #ff69b4;
                 color: $white-color;
                 border-radius: 50px;
                 padding: 6px 25px;
@@ -264,7 +264,8 @@
     }
   }
   .Active-right {
-    background-color: $side-bar-color;
+    // background-color: $side-bar-color;
+    background-color:#c19ab2b3;
     flex: 1;
     flex-basis: 30%;
     .active-right-one {
@@ -275,9 +276,18 @@
         margin-top: 20px;
         border-bottom: 2px solid $light-grey;
 
-        .Contact {
+
+        
+        .profileName{
+          color: white;
+          font-weight: 500;
+          font-size: 21px;
+        }
+        .Contact{
           margin-bottom: 10px;
-          color: $grey;
+          font-weight: 450;
+          font-size: 18px;
+          color: white;
           .email {
             margin-left: 5px;
           }

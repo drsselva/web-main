@@ -16,6 +16,7 @@ import { IoMdNotificationsOff } from "react-icons/io";
 import { RxSpeakerLoud } from "react-icons/rx";
 import { FiMoreVertical } from "react-icons/fi";
 import { PiPencilLineFill } from "react-icons/pi";
+import CalendarFilter from "./CalendarFilter";
 
 const ActiveSessions = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -129,6 +130,9 @@ const ActiveSessions = () => {
         <div className="active-left-bottom">
           <div className="bottom-active">
             <h2 className="Completed">Completed Session</h2>
+            <div className="calendarFilter"> 
+             <CalendarFilter/>
+             </div>
             <p className="view">
               View All <BiSolidRightArrow />
             </p>
@@ -272,17 +276,17 @@ const ActiveSessions = () => {
                 }
               />
 
-              <h5 className="mb-0 fs-5">
-                {getnames ? getnames : getprofiles ? getprofiles.name : "Name"}
+              <h5 className="mb-0 fs-5 profileName">
+                {getnames ? getnames : getprofiles ? getprofiles.name : "Rachel Green"}
               </h5>
             </div>
             {/* <img src={avatar} alt="gir" width="204" height="211" />
             <h2>Alexa</h2> */}
             <p className="Contact">
-              Email:<span className="email">alex56@gmail.com</span>
+              Email:<span className="email">rachel.green@gmail.com</span>
             </p>
             <p className="Contact">
-              Contact Number:<span className="email">9876543456</span>
+              Contact Number:<span className="email">+12-7654-3456</span>
             </p>
 
             <button
