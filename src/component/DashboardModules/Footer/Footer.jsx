@@ -6,42 +6,49 @@ import {
   AiFillYoutube,
   AiOutlineCamera,
 } from "react-icons/ai";
+
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-wrapper">
         <div className="footer-left">
           <p className="footer-left-email">
-            Email : <span className="mobile"> admin@gritdigitech.com</span>
+            Email :{" "}
+            <a href="mailto:admin@gritdigitech.com" className="mobile">
+              admin@gritdigitech.com
+            </a>
           </p>
           <p className="footer-left-email">
-            Mobile : <span className="mobile"> +91-8610342869</span>
+            Mobile :{" "}
+            <a href="tel:+918610342869" className="mobile">
+              +91-8610342869
+            </a>
           </p>
         </div>
         <div className="footer-right">
           <h4 className="Contact">Contact Us</h4>
           <p className="footer-right-social">
-            <span className="AiOutlineTwitter">
+            <a href="https://www.twitter.com" className="AiOutlineTwitter">
               <AiOutlineTwitter />
-            </span>
-            <span className="AiOutlineTwitter">
+            </a>
+            <a href="https://www.instagram.com" className="AiOutlineTwitter">
               <AiOutlineInstagram />
-            </span>
-            <span className="AiOutlineTwitter">
+            </a>
+            <a href="https://www.linkedin.com" className="AiOutlineTwitter">
               <AiFillLinkedin />
-            </span>
-            <span className="AiOutlineTwitter">
+            </a>
+            <a href="https://www.youtube.com" className="AiOutlineTwitter">
               <AiFillYoutube />
-            </span>
-            <span className="AiOutlineTwitter">
+            </a>
+            <a href="https://www.example.com" className="AiOutlineTwitter">
               <AiOutlineCamera />
-            </span>
+            </a>
           </p>
         </div>
       </div>
-      <p className="Copyright">
+      <div className="Copyright">
         Copyright-2023 All Right Reserved By GRIT Digitech - Pvt Ltd
-      </p>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../../../views/VideoPlayer/VideoPlayer";
 import DatePicker from "react-datepicker";
 // import group from '../../../assets/img/'
@@ -10,12 +10,13 @@ import rectangularone from "../../../assets/img/Rectangle-1874.png";
 import rectangulartwo from "../../../assets/img/Rectangle-1875.png";
 import { BiSolidRightArrow, BiCalendar } from "react-icons/bi";
 import { AiFillStar, AiOutlineBell } from "react-icons/ai";
-import { TfiDownload } from "react-icons/tfi";
+import { BsFillCloudDownloadFill } from 'react-icons/bs';
 import ellipse from "../../../assets/img/student-db/ellipse.png";
 import { IoMdNotificationsOff } from "react-icons/io";
 import { RxSpeakerLoud } from "react-icons/rx";
 import { FiMoreVertical } from "react-icons/fi";
 import { PiPencilLineFill } from "react-icons/pi";
+import CalendarFilter from "./CalendarFilter";
 
 const ActiveSessions = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -25,6 +26,7 @@ const ActiveSessions = () => {
 
   const pdf_file_url = "http://localhost:3000/Downloads/feedback.pdf";
   const Navigate = useNavigate();
+  const fileInputRef = useRef(null);
 
   const downloadFileAtURL = (url) => {
     const fileName = url.split("/").pop();
@@ -36,11 +38,23 @@ const ActiveSessions = () => {
     aTag.remove();
   };
 
+  const onClickUpload = () => {
+    const fileInput = document.getElementById('fileInput');
+    fileInput.click();
+  };
+
+  const handleFileInputChange = (event) => {
+    // Handle the file input change event here
+    const selectedFile = event.target.files[0];
+    // Process the selected file as needed
+    console.log('Selected file:', selectedFile);
+  };
+
   return (
     <div className="Active">
-      <div class="Active-left" contenteditable>
+      <div className="Active-left" contenteditable>
         <div className="active-left-top">
-          <h2 className="Sessions-head">Active Sessions :</h2>
+          <h2 className="Sessions-head">Active Sessions</h2>
           <div className="active-left-top-wrapper">
             <div
               className="top-img"
@@ -52,7 +66,7 @@ const ActiveSessions = () => {
                 width="382"
                 height="286"
 
-                // onClick={() => Navigate("/videoplayer")}
+              // onClick={() => Navigate("/videoplayer")}
               />
             </div>
             <div className="bar">
@@ -83,31 +97,44 @@ const ActiveSessions = () => {
                 </div>
               </div>
               <progress id="file" value="32" max="100" className="proses">
-                32%
+                80%
               </progress>
-              <div className="HomeWork">
-                <button className="Upload" type="file">
-                  Upload <br /> HomeWork
-                  <input type="file" className="input" />
-                </button>
 
-                <button
-                  className="Download"
-                  onClick={() => {
+              <div className="radio-inputs">
+                <label className="radio">
+                  <input type="radio" name="radio"/>
+                  <span className="name"  onClick={onClickUpload} >Upload<br />HomeWork
+                  </span>
+                </label>
+
+                <label className="radio">
+                  <input type="radio" name="radio"/>
+                  <span onClick={() => {
                     downloadFileAtURL(pdf_file_url);
-                  }}
-                >
-                  Download <br /> Materials
-                </button>
+                  }} className="name">Download<br />Materials</span>
+                </label>
+                <input
+                  type="file"
+                  id="fileInput"
+                  ref={fileInputRef}
+                  className="input"
+                  onChange={handleFileInputChange}
+                  style={{ display: 'none' }}
+                />
               </div>
+
+
             </div>
           </div>
         </div>
         <div className="active-left-bottom">
           <div className="bottom-active">
-            <h2 className="Completed">Completed Session :</h2>
+            <h2 className="Completed">Completed Session</h2>
+            <div className="calendarFilter"> 
+             <CalendarFilter/>
+             </div>
             <p className="view">
-              view All <BiSolidRightArrow />
+              View All <BiSolidRightArrow />
             </p>
           </div>
           <table>
@@ -131,8 +158,8 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
@@ -150,8 +177,8 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
@@ -169,8 +196,8 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
@@ -188,8 +215,8 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
@@ -207,8 +234,8 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
@@ -226,15 +253,15 @@ const ActiveSessions = () => {
                 <button className="DESIGN">UI DESIGN</button>
               </td>
               <td className="download">
-                <a href="" className="TfiDownload">
-                  <TfiDownload />
+                <a href="" className="BsFillCloudDownloadFill">
+                  <BsFillCloudDownloadFill />
                 </a>
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="Active-right" contenteditable>
+      <div className="Active-right" contenteditable>
         <div className="active-right-one">
           <div className="one-img">
             <div className="student-img-wrap text-center">
@@ -244,22 +271,22 @@ const ActiveSessions = () => {
                   getimage
                     ? getimage
                     : getprofiles
-                    ? getprofiles.imageUrl
-                    : ellipse
+                      ? getprofiles.imageUrl
+                      : ellipse
                 }
               />
 
-              <h5 className="mb-0 fs-5">
-                {getnames ? getnames : getprofiles ? getprofiles.name : "Name"}
+              <h5 className="mb-0 fs-5 profileName">
+                {getnames ? getnames : getprofiles ? getprofiles.name : "Rachel Green"}
               </h5>
             </div>
             {/* <img src={avatar} alt="gir" width="204" height="211" />
             <h2>Alexa</h2> */}
             <p className="Contact">
-              Email: <span className="email">alex56@gmail.com</span>
+              Email:<span className="email">rachel.green@gmail.com</span>
             </p>
             <p className="Contact">
-              Contact Number: <span className="email">9876543456</span>
+              Contact Number:<span className="email">+12-7654-3456</span>
             </p>
 
             <button
@@ -305,7 +332,7 @@ const ActiveSessions = () => {
           </div>
           <div className="right-three">
             <div className="right-upcoming">
-              <h3 className="UpComing">UpComing Sessions</h3>
+              <h3 className="UpComing">Upcoming Sessions</h3>
             </div>
             <div className="right-three-one">
               <img src={rectangular} alt="" width="87" height="65" />

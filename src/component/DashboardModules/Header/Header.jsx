@@ -1,28 +1,45 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+export default function NavBar() {
   return (
-    <div className="header">
-      <div className="header-wrapper">
-        <div className="header-left">
-          <div className="header-left-logo">
-            <img
-              src="https://www.gritdigitech.com/assets/img/logo-icon.png"
-              alt="logo"
-            />
+    <header className="navbar01">
+      <nav className="navbar-content">
+        <div className="logo-brand">
+          <div className="logo">
+            <img src="https://www.gritdigitech.com/assets/img/logo-icon.png" alt="Logo" />
           </div>
-          <div className="header-left-text">
-            <span>GR</span>
-            <span className="it">IT</span>
-            <span className="studies">Studies</span>
+          <div className="brand">
+            <span className="brand-text">
+              <span className="brand-highlight">GR</span><span>IT</span> <span className="brand-studies">Studies</span>
+            </span>
           </div>
         </div>
-        <div className="header-right">
-          <p className="LogOut">LogOut</p>
+        <div className="nav-items">
+          <div className="nav-item">
+          <Link to="/studentlogin" className="nav-button">
+ Logout
+</Link>
+          </div>
+          {/* <div className="nav-item">
+            <button className="buy-courses-company-button">Buy Courses</button>
+          </div> */}
+          {/* <div className="nav-item">
+            <div className="company-dropdown">
+              <button className="nav-button buy-courses-company-button">
+                Company ▼
+              </button>
+              <div className="company-menu">
+                <ul>
+                  <li>About Us</li>
+                  <li>Services</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
+          </div> */}
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
-};
-
-export default Header;
+}
