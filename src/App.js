@@ -23,6 +23,9 @@ import Contactus from "./views/contactus/Contactus";
 import Getstarted from "./views/getstarted/Getstarted";
 import { toast, ToastContainer } from "react-toastify";
 
+import EducatorAccountSetting01 from "./EducatorViews/accountSetting/AccountSetting.jsx";
+import EducatorHome from './EducatorViews/home/Home.jsx'
+
 import Home from "./views/home/Home";
 
 import AOS from "aos";
@@ -63,6 +66,8 @@ function App() {
         <Route exact path="/educatorlogin" element={<Educatorlogin />} />
 
         <Route exact path="/educatorsignup" element={<Educatorsignup />} />
+
+
 
         <Route
           exact
@@ -107,6 +112,10 @@ function App() {
 
         <Route exact path="/contactus" element={<Contactus />} />
         <Route exact path="/getstarted" element={<Getstarted />} />
+
+        <Route exact path="/EducatorAccountSetting" element={<EducatorAccountSetting01 />} />
+
+        <Route exact path="/EducatorHome" element={<EducatorHome />} />
       </Routes>
     </React.Fragment>
   );

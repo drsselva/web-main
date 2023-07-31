@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 const HeaderHero = () => {
   return (
     <div>
@@ -11,7 +11,14 @@ const HeaderHero = () => {
             trenches through hard work
           </p>
         </div>
-        <button className="home">Home</button>
+        {/* <button className="home">Home</button> */}
+        {/* <Link to="/" className="home">
+              Home/ */}
+          <div className="home" >
+          <Link to="/" style={{color:'white'}}>
+              Home/
+            </Link> Dashboard
+          </div>
       </div>
     </div>
   );

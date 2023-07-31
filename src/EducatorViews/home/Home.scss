@@ -1,0 +1,138 @@
+body {
+    background-color: #F0FCEB;;
+    margin: 0;
+    padding: 0;
+  }
+
+.left{
+    color: black;
+}
+
+.header-transparent {
+    background-color: transparent;
+    width: 94%;
+    margin-left: 5%;
+    box-shadow:none;
+    backdrop-filter: blur(2000px);
+    height: 40px;
+    
+    .navbar-content{
+        .nav-items{
+            .nav-item{
+                color: #0B5C0B!important;
+                .nav-button{
+                    color:#0B5C0B;
+                }
+            }
+        }
+    }
+    
+  }
+
+  .home{
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 84%;
+    // background-color: blue;
+    // height: 100vh;
+    // background-color: red;
+  }
+ 
+
+  .Greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    background-color: #0B5C0B;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 14px;
+  }
+  
+  .greeting-text {
+    flex: 1;
+    padding: 5px 20px 0px 20px;
+  }
+  
+  .greeting-image-container {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .greeting-image {
+    max-width: 42%;
+  }
+
+
+
+
+  .attendance-activity {
+    display: flex;
+    // align-items: center;
+    padding-left: 12px;
+    justify-content: space-between;
+    // padding: px;
+    // border-radius: 10px;
+  }
+
+  .attendance {
+    flex: 1;
+    // background-color: rgb(0, 255, 13);
+    margin-right: 0px;
+
+    width: 60%;
+    // height: 100vh;
+    gap: 0px;
+
+  }
+  .attendance-top{
+    display: flex;
+    width: 100%;
+    
+  }
+  .attendance-bottom{
+    // padding-left: 10px;
+    margin-top: 10px;
+    background-color: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 98.1%;
+    
+  }
+
+  .attendance-card {
+    flex: 1 0 calc(33.33% - 10px); /* Each card occupies 1/3 of the width with 10px gap */
+    margin: 0px; /* Add a gap between each card */
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  ;
+  }
+  
+  .attendance-card:first-child {
+    margin-left: -2px;
+  }
+  
+  .activity {
+    background-color: none;
+    margin-top: 5px;
+    margin-left: 7px;
+    width: 25%;
+    // height: 100%;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  .home-stats{
+    display: flex;
+    background-color: none;
+    // margin-left: 10px;
+  }
+  .stats{
+    flex: 1 0 calc(50% - 10px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  .two{
+    margin-top: 10px;
+    height: 236px;
+  }
