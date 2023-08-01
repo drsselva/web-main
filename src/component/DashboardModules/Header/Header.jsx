@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom'; 
+=======
 import { Link } from 'react-router-dom';
+>>>>>>> a4a31bd811d870c582ea28027219264215d729e0
 
 export default function NavBar() {
   return (
@@ -17,9 +21,16 @@ export default function NavBar() {
         </div>
         <div className="nav-items">
           <div className="nav-item">
+<<<<<<< HEAD
+            {/* <button className="nav-button">Logout</button> */}
+            <Link to="/studentlogin" className="nav-button">
+              Logout
+            </Link>
+=======
           <Link to="/studentlogin" className="nav-button">
  Logout
 </Link>
+>>>>>>> a4a31bd811d870c582ea28027219264215d729e0
           </div>
           {/* <div className="nav-item">
             <button className="buy-courses-company-button">Buy Courses</button>

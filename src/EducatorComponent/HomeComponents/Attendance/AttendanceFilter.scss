@@ -1,0 +1,50 @@
+.attendance-filter-container {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    // padding: 0px!important;
+    background-color: white;
+    margin: 0!important;
+    // width: 100%;
+  
+    .filter-dropdown {
+      display: flex;
+      align-items: center;
+  
+      .MuiFormControl-root {
+        width: 100%;
+  
+        .MuiInputLabel-outlined {
+          transform: translate(14px, 14px) scale(1);
+        }
+  
+        .MuiSelect-root {
+          padding: 8px 14px;
+        }
+      }
+    }
+  
+    .filter-date-picker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .date-picker {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    .filter-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .MuiButton-root {
+        min-width: 120px;
+        background-color: #0B5C0B;
+
+      }
+    }
+  }
+  

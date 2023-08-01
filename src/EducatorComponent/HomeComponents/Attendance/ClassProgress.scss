@@ -1,0 +1,45 @@
+// ClassStatistics.scss
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #F0F7FF;
+    width: 396px;
+    margin: 10px;
+    margin-bottom: 20px;
+    .center-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .right-column {
+      flex: 1;
+  
+      canvas {
+        max-width: 50px;
+        max-height: 50px;
+        border: 3px solid green;
+        border-radius: 50%;
+        margin-left: 28%;
+        align-items: center;
+      }
+    }
+  
+    .class-info {
+      text-align: center;
+    }
+  }
+
+  .ClassProgresstext{
+    color: #000;
+    text-align: center;
+    margin: 8px;
+  }
+
+  .one{
+    background-color: white;
+    margin: 10px;
+  }
+  

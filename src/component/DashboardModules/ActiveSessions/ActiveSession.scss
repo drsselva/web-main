@@ -14,7 +14,7 @@
     // padding: 10px 50px;
     flex: 1;
     padding: 2%;
-    flex-basis: 70%;
+    flex-basis: 75%;
     background-color: #ffffff;
     .active-left-top {
       
@@ -267,7 +267,7 @@
     // background-color: $side-bar-color;
     background-color:#c19ab2b3;
     flex: 1;
-    flex-basis: 30%;
+    flex-basis: 25%;
     .active-right-one {
       .one-img {
         @include grit(center, center);
@@ -279,7 +279,7 @@
 
         
         .profileName{
-          color: white;
+          color: rgb(0, 0, 0);
           font-weight: 500;
           font-size: 21px;
         }
@@ -287,7 +287,7 @@
           margin-bottom: 10px;
           font-weight: 450;
           font-size: 18px;
-          color: white;
+          color: rgb(0, 0, 0);
           .email {
             margin-left: 5px;
           }
