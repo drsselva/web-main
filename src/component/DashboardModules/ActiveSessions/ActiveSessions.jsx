@@ -76,9 +76,9 @@ const ActiveSessions = () => {
                   <span className="Product">Analytic</span>
                   <span className="Middle">Middle/Pro</span>
                   <span className="line">
-                    <ul className="dot">
-                      <li className="prog">In Progress</li>
-                    </ul>
+                    {/* <ul className="dot"> */}
+                      <ul className="prog">In Progress</ul>
+                    {/* </ul> */}
                   </span>
                 </div>
                 <div className="top-btns">

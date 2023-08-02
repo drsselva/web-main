@@ -29,7 +29,7 @@ const ClassStatistics = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-progress">
       <div className="center-column">
         <p className="class-info">Class A<br />90 registered</p>
       </div>

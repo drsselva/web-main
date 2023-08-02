@@ -69,10 +69,15 @@ function App() {
 
 
 
-        <Route
+        {/* <Route
           exact
           path="/educatordashboard"
           element={<Educatordashboard />}
+        /> */}
+        <Route
+          exact
+          path="/educatordashboard"
+          element={<EducatorHome />}
         />
 
         <Route exact path="/marketplace" element={<Marketplace />} />
@@ -115,7 +120,7 @@ function App() {
 
         <Route exact path="/EducatorAccountSetting" element={<EducatorAccountSetting01 />} />
 
-        <Route exact path="/EducatorHome" element={<EducatorHome />} />
+        {/* <Route exact path="/EducatorHome" element={<EducatorHome />} /> */}
       </Routes>
     </React.Fragment>
   );

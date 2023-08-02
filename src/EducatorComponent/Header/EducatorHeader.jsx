@@ -9,7 +9,7 @@ import GritLogo from '../../EducatorAssets/Home-grit-logo.png';
 import LogoIcon from "../../EducatorAssets/Home-logo-icon.png";
 
 function ReactSideBar(){
-    const [show,setShow]=useState(false);
+    const [show,setshow]=useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ function ReactSideBar(){
     
       const handleClick = () => {
         if (!isMobile) {
-          setShow(!show);
+          setshow(!show);
         }
       };
     return(

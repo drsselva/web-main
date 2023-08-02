@@ -11,8 +11,8 @@ import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./Slices";
 import "./css/index.scss";
+import "../src/Educatorcss/index01.scss"
 import ScrollToTop from "./views/scrolltotop";
-import './Educatorcss/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = configureStore(
