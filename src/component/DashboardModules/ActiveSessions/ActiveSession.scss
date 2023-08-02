@@ -104,7 +104,7 @@
                 background-color: #ffffff;
                 border: none;
                 width: 80%;
-                margin-top: 30px;
+                margin-top: 40px;
               }
             }
           }
@@ -125,6 +125,10 @@
             .proses::-webkit-progress-bar {
               background: $primary-color;
             }
+          }
+
+          .prog{
+            margin-left: 10px!important;
           }
 
 

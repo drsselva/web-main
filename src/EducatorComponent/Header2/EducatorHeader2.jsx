@@ -11,20 +11,12 @@ export default function Header2({ className, showSearchBar }) {
   };
 
   return (
-    <header className={`navbar01 ${className} ${darkMode ? 'dark-mode' : ''}`}>
+    <header className={`navbar0111 ${className} ${darkMode ? 'dark-mode' : ''}`}>
       <nav className="navbar-content">
           {showSearchBar && <input type="text" placeholder="Search Class, Documents, Activities..." className="search-bar" />}
         <div className="nav-items">
 
           <div className="nav-item">
-
-
-
-
-
-
-
-
             <FontAwesomeIcon icon={faSun} className="mode-icon" />
             <label className="switch">
               <input type="checkbox" onChange={handleModeToggle} checked={darkMode} />

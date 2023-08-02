@@ -33,7 +33,7 @@ const Attendance = ({ presentCount, totalCount }) => {
           <Pie data={data} options={options} />
         </div>
         <div className="attendance-info">
-          <h3>Attendance <br/> Percentage: {attendancePercent}%</h3>
+          <h5>Attendance <br/> Percentage: {attendancePercent}%</h5>
           <p>
             Present:.<br/> {presentCount} / Total: {totalCount}
           </p>

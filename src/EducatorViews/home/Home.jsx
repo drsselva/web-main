@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../EducatorComponent/Header/Header';
-import Header2 from '../../EducatorComponent/Header2/Header2';
+import Header from '../../EducatorComponent/Header/EducatorHeader';
+import Header2 from '../../EducatorComponent/Header2/EducatorHeader2';
 import GreetingImage from '../../EducatorAssets/Home-greetings.png';
 import Attendance from '../../EducatorComponent/HomeComponents/Attendance/AttendanceCard';
 import AttendanceFilter from '../../EducatorComponent/HomeComponents/Attendance/AttendanceFilter';
@@ -37,10 +37,10 @@ function Home() {
                 <Attendance presentCount={presentCount} totalCount={totalCount} />
               </div>
               <div className="attendance-card">
-                <Attendance presentCount={presentCount} totalCount={totalCount} />
+                <Attendance presentCount={23} totalCount={55} />
               </div>
               <div className="attendance-card">
-                <Attendance presentCount={presentCount} totalCount={totalCount} />
+                <Attendance presentCount={88} totalCount={134} />
               </div>
             </div>
             <div className="attendance-bottom">
